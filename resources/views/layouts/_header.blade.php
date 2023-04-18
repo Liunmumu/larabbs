@@ -17,8 +17,8 @@
       <!-- 右侧菜单栏 -->
       <ul class="navbar-nav navbar-right">
         <!-- 设置跳转 -->
-        <li class="nav-item"><a class="nav-link" href="#">Sign in</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Sigh up</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Sign in</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Sigh up</a></li>
       </ul>
     </div>
   </div>
