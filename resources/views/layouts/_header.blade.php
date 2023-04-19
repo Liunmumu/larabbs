@@ -18,8 +18,8 @@
       <ul class="navbar-nav navbar-right">
         <!-- 判断登录状态 -->
         @guest
-          <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Sign in</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Sigh up</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
         @else
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -35,7 +35,7 @@
               <a class="dropdown-item" id="logout" href="#">
                 <form action="{{ route('logout') }}" method="POST">
                   {{ csrf_field() }}
-                  <button class="btn btn-block btn-danger" type="submit" name="button">Sign out</button>
+                  <button class="btn btn-block btn-danger" type="submit" name="button">Logout</button>
                 </form>
               </a>
             </div>
