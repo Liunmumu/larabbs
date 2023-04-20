@@ -16,7 +16,6 @@
           <p>{{ $user->introduction }}</p>
           <hr>
           <h5><strong>Registered at</strong></h5>
-          {{ dd($user->created_at) }}
           <p>{{ $user->created_at->diffForHumans() }}</p>
         </div>
       </div>
