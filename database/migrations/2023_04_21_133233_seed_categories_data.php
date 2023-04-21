@@ -19,7 +19,7 @@ return new class extends Migration
                 'description' => 'Share creation, share discovery',
             ],
             [
-                'name'        => 'Course materials',
+                'name'        => 'Course',
                 'description' => 'Course materials and learning experiences',
             ],
             [

@@ -12,7 +12,13 @@
 
     <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
       <!-- 左侧菜单栏，可按需添加 -->
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link {{ active_class(if_route('topics.index')) }}" href="{{ route('topics.index') }}">Topics</a></li>
+        <li class="nav-item"><a class="nav-link {{ active_class((if_route('categories.show') && if_route_param('category', 1))) }}" href="{{ route('categories.show', 1) }}">Share</a></li>
+        <li class="nav-item"><a class="nav-link {{ active_class((if_route('categories.show') && if_route_param('category', 2))) }}" href="{{ route('categories.show', 2) }}">Course</a></li>
+        <li class="nav-item"><a class="nav-link {{ active_class((if_route('categories.show') && if_route_param('category', 3))) }}" href="{{ route('categories.show', 3) }}">Q&A</a></li>
+        <li class="nav-item"><a class="nav-link {{ active_class((if_route('categories.show') && if_route_param('category', 4))) }}" href="{{ route('categories.show', 4) }}">Announcement</a></li>
+      </ul>
 
       <!-- 右侧菜单栏 -->
       <ul class="navbar-nav navbar-right">
