@@ -12,8 +12,11 @@
 
   <title>@yield('title', 'LaraBBS') - HappyBBS</title>
 
-  <!-- 引入编译后的CSS文件 -->
+  <!-- 样式 -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+  @yield('styles')
+
 </head>
 
 <body>
@@ -36,6 +39,9 @@
   <!-- Scripts -->
   <script src="{{ mix('js/app.js') }}">
   </script>
+
+  @yield('scripts')
+
 </body>
 
 </html>
