@@ -19,10 +19,10 @@ class UsersTableSeeder extends Seeder
         User::factory()->count(10)->create();
 
         // 单独处理用户的数据
-        $user = User::find(7);
+        $user = User::find(2);
         $user->name = '6666';
-        $user->email = 'lauraliu9756@gmail.com';
-        $user->avatar = 'https://cdn.learnku.com/uploads/images/201710/14/1/ZqM7iaP4CR.png';
+        $user->email = '1060556579@qq.com';
+        $user->avatar = 'http://happybbs.herokuapp.com//uploads/images/avatars/202304/24/2_1682341202_QHto0ANxeZ.png';
         $user->save();
     }
 }

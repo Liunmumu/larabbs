@@ -13,7 +13,8 @@
         "laravel/tinker": "^2.7",
         "mews/captcha": "~3.0",
         "laravel/ui": "3.4.5",
-        "summerblue/laravel-active": "9.*"
+        "summerblue/laravel-active": "9.*",
+        "summerblue/generator": "9.*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "~3.6",
