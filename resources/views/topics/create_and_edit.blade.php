@@ -66,6 +66,7 @@
   <script type="text/javascript" src="{{ asset('js/hotkeys.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/uploader.js') }}"></script>
   <script type="text/javascript" src="{{ asset('js/simditor.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('js/simditor-dropzone') }}"></script>
 
   <script>
     $(document).ready(function() {
@@ -77,7 +78,7 @@
             _token: '{{ csrf_token() }}'
           },
           fileKey: 'upload_file',
-          connectionCount: 5,
+          connectionCount: 3,
           leaveConfirm: 'The file is uploading, close this page will cancel the upload.'
         },
         pasteImage: true,

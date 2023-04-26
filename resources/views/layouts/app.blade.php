@@ -11,6 +11,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>@yield('title', 'LaraBBS') - HappyBBS</title>
+  <meta name="description" content="@yield('description', 'Happybbs - UQ')" />
 
   <!-- 样式 -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
