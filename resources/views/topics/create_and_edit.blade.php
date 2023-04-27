@@ -35,9 +35,11 @@
 
           <div class="mb-3">
             <select class="form-control" name="category_id" required>
-              <option value="" hidden disabled selected>please select a categorie</option>
+              <option value="" hidden disabled {{ $topic->id ? '' : 'selected' }}>please select a categorie</option>
                @foreach ($categories as $value)
-                <option value="{{ $value->id }}">{{ $value->name }}</option>
+                <option value="{{ $value->id }}" {{ $topic->category_id == $value->id ? 'selected' : '' }}>
+                        {{ $value->name }}
+                </option>
                @endforeach
             </select>
           </div>
