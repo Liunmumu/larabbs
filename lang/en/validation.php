@@ -167,4 +167,9 @@ return [
 
     'attributes' => [],
 
+    "letters" => ":attribute Must contain at least one letter.",
+    "case_diff" => ":attribute Must contain uppercase and lowercase letters.",
+    "numbers" => ":attribute Must contain at least one number.",
+    "symbols" => ":attribute Must contain at least one symbol.",
+
 ];
