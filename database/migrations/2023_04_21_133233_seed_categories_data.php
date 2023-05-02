@@ -28,7 +28,7 @@ return new class extends Migration
             ],
             [
                 'name'        => 'Announcement',
-                'description' => 'Site announcement',
+                'description' => 'Site announcements',
             ],
         ];
 
