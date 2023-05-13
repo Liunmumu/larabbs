@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '我的通知')
+@section('title', 'My message')
 
 @section('content')
   <div class="container">
