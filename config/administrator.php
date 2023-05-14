@@ -88,6 +88,9 @@ return array(
             'topics',
             'replies',
         ],
+        'Site management' => [
+            'settings.site',
+        ],
     ],
 
     /*

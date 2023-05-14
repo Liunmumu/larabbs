@@ -11,8 +11,8 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>@yield('title', 'LaraBBS') - HappyBBS</title>
-  <meta name="description" content="@yield('description', 'Happybbs - UQ')" />
-
+  <meta name="description" content="@yield('description', setting('seo_description','Happybbs - UQ'))" />
+  <meta name="keywords" content="@yield('keyword', setting('seo_keyword', 'Happybbs, UQ'))" />
   <!-- 样式 -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
