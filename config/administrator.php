@@ -80,6 +80,8 @@ return array(
     'menu' => [
         'Users and Permissions' => [
             'users',
+            'roles',
+            'permissions',
         ],
     ],
 
