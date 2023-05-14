@@ -18,7 +18,7 @@ class TopicsController extends Controller
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
-	public function index(Request $request, Topic $topic, User $user)
+	public function index(Request $request, Topic $topic, User $user, Link $link)
 	{
 		$topics = $topic->withOrder($request->order)
                         ->with('user', 'category')  // 预加载防止 N+1 问题
