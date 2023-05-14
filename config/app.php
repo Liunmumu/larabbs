@@ -214,4 +214,5 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'Redis' => Illuminate\Support\Facades\Redis::class,
 ];
