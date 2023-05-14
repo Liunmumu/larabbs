@@ -12,13 +12,15 @@ use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Foundation\Auth\Notifications\ResetPassword;
 use Illuminate\Support\Str;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Redis;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
     use HasRoles;
     use Traits\ActiveUserHelper;
+    use Traits\LastActivedAtHelper;
     use HasApiTokens, HasFactory, Notifiable, MustVerifyEmailTrait;
-
     use Notifiable {
         notify as protected laravelNotify;
     }
@@ -114,5 +116,25 @@ class User extends Authenticatable implements MustVerifyEmail
         }
 
         $this->attributes['avatar'] = $path;
+    }
+
+    public function recordLastActivedAt()
+    {
+        // 获取今天的日期
+        $date = Carbon::now()->toDateString();
+
+        // Redis 哈希表的命名，如：larabbs_last_actived_at_2017-10-21
+        $hash = $this->hash_prefix . $date;
+
+        // 字段名称，如：user_1
+        $field = $this->field_prefix . $this->id;
+
+        //dd(Redis::hGetAll($hash));
+
+        // 当前时间，如：2017-10-21 08:35:15
+        $now = Carbon::now()->toDateTimeString();
+
+        // 数据写入 Redis ，字段已存在会被更新
+        Redis::hSet($hash, $field, $now);
     }
 }
