@@ -17,11 +17,14 @@ class CategoriesController extends Controller
                         ->with('user', 'category')   // 预加载防止 N+1 问题
                         ->paginate(10);
 
-                        // 活跃用户列表
+        // 活跃用户列表
         $active_users = $user->getActiveUsers();
 
-        // 传参变量话题和分类到模板中
-        return view('topics.index', compact('topics', 'category', 'active_users'));
+        // 资源链接
+        $links = $link->getAllCached();
+
+        // 传参变量到模板中
+        return view('topics.index', compact('topics', 'category', 'active_users', 'links'));
     }
 
     public function create(Topic $topic)
