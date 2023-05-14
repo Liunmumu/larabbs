@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ReplyRequest;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Link;
 
 class RepliesController extends Controller
 {
