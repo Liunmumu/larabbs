@@ -44,7 +44,7 @@ return [
             'title'    => 'Name',
             'sortable' => false,
             'output' => function ($name, $model) {
-                return '<a href="/users/'.$model->id.'" target=_blank>'.$name.'</a>';
+                return '<a href="users/'.$model->id.'" target=_blank>'.$name.'</a>';
             },
         ],
 
