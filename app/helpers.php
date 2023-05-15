@@ -61,7 +61,7 @@ function model_link($title, $model, $prefix = '')
     $model_name = model_plural_name($model);
 
     // 初始化前缀
-    $prefix = $prefix ? "$prefix/" : '/';
+    $prefix = $prefix ? "$prefix/" : '';
 
     // 使用站点 URL 拼接全量 URL
     $url = config('app.url') . $prefix . $model_name . '/' . $model->id;
